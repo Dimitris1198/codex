@@ -1,0 +1,8 @@
+<article <?php post_class('card'); ?>>
+    <div class="meta">
+        <span class="badge">General</span>
+        <time datetime="<?php echo esc_attr(get_the_date('c')); ?>"><?php echo esc_html(get_the_date()); ?></time>
+    </div>
+    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    <p><?php echo esc_html(get_the_excerpt()); ?></p>
+</article>

@@ -1,0 +1,189 @@
+/*
+Theme Name: Repress
+Theme URI: https://example.com/themes/repress
+Author: Newsroom Studio
+Description: A clean, magazine-style WordPress theme for news and sport articles.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: repress
+Tags: news, sport, magazine, responsive, accessibility-ready
+*/
+
+:root {
+  --brand-primary: #0a4d68;
+  --brand-accent: #ffb703;
+  --background: #f8fafc;
+  --text: #0f172a;
+  --muted: #475569;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+a {
+  color: var(--brand-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.container {
+  width: min(1200px, 90vw);
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+.site-header {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.branding .mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--brand-primary), #1f7a8c);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.branding .title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(10, 77, 104, 0.12), rgba(255, 183, 3, 0.12));
+  padding: 2rem;
+  border-radius: 14px;
+}
+
+.hero h1 {
+  margin-top: 0;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+}
+
+.hero p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.hero .cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--brand-primary);
+  color: white;
+  padding: 0.85rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(10, 77, 104, 0.2);
+}
+
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 1.25rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 1.25rem;
+  display: grid;
+  gap: 0.75rem;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+}
+
+.card .meta {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(10, 77, 104, 0.08);
+  color: var(--brand-primary);
+  font-weight: 700;
+  padding: 0.4rem 0.65rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+}
+
+.footer {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid #e2e8f0;
+  color: var(--muted);
+  text-align: center;
+}
+
+.widget-area {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.widget-title {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
