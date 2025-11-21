@@ -22,6 +22,13 @@ add_action('after_setup_theme', 'repress_setup');
 
 function repress_assets() {
     wp_enqueue_style('repress-style', get_stylesheet_uri(), [], wp_get_theme()->get('Version'));
+    wp_enqueue_script(
+        'repress-theme',
+        get_template_directory_uri() . '/theme.js',
+        [],
+        wp_get_theme()->get('Version'),
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'repress_assets');
 
